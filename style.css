@@ -1,0 +1,112 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.container{
+    /* position: relative; */
+    /* display: grid; */
+    height: 100%;
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 20px;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    /* grid-template-columns: repeat(3,1fr); */
+    /* justify-content: space-around; */
+}
+.container h1{
+    margin: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+.gallery{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pic{
+    width: 32%;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.pic img{
+    width: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    height: 100%;
+    object-fit: cover;
+}
+.pic:hover{
+    transform: scale(1.03);
+    filter:drop-shadow(0 0 10px #333);
+    transition: 0.3s ease;
+}
+.pic:hover img{
+    filter: none;
+}
+
+.pic figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background:linear-gradient(0deg ,rgba(0,0,0,0.5) 0%,rgba(255,255,255,0.0) 100%);
+    transition: 0.3;
+
+}
+.pic:hover figcaption{
+    opacity: 1;
+    transform: scale(1.03);
+}
+/* .pic{
+    position: relative;
+    transition: all 1s;
+
+}
+.imag{
+    
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+.caption{
+    position: absolute;
+    bottom: 5px;
+    left: 2px;
+    display: none;
+    z-index: 1;
+}
+.pic:hover .caption{
+    display: block;
+    transform: scale(1.1);
+    transition: all 1s ease;
+    background-image: linear-gradient(grey, white);
+}
+.pic:hover .imag{
+    transform: scale(1.1);
+    box-shadow: 10px 15px 20px grey;
+    transition: all 1s ease;
+    filter: none;
+
+} */
